@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+dependencies {
+    implementation 'ch.qos.logback:logback-classic:1.2.5'
+    testImplementation 'junit:junit:4.12'
+}
+
+application {
+    mainClassName = 'com.tbordovsky.teapot.App'
+}
